@@ -13,3 +13,93 @@
     src: url(./assets/fonts/Oxygen-Bold.ttf);
     font-weight: 700;
 }
+* {
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #f3f2e2;
+}
+.wrapper {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.title {
+    font-size: 1.5em;
+}
+.meme-container {
+    text-align: center;
+}
+.meme-container input {
+    display: none;
+    height: 100%;
+}
+input:checked~label >.meme-img {
+    height: 40vh;
+    transition: .5s;
+  }
+.meme-name {
+    display: flex;
+    font-size: 1em;
+    text-align: left;
+    cursor: pointer;
+}
+.meme-name::after {
+    width: .8em;
+    height: .8em;
+    margin-left: auto;
+    background-size: .8em;
+    content: '';
+    background-image: url(./assets/icons/angle-down-solid.svg);
+    transition: all 0.35s;
+}
+.meme-img {
+    width: 100%;
+    height: 0;
+    transition: .5s;
+}
+#img-1 {
+    background: url(./assets/img/1_waiting.png) no-repeat center / contain;
+}
+#img-2 {
+    background: url(./assets/img/2_reading.png) no-repeat center / contain;
+}
+#img-3 {
+    background: url(./assets/img/3_noJS.png) no-repeat center / contain;
+}
+#img-4 {
+    background: url(./assets/img/4_acceptance.png) no-repeat center / contain;
+}
+#img-5 {
+    background: url(./assets/img/5_planning.png) no-repeat center / contain;
+}
+#img-6 {
+    background: url(./assets/img/6_missJS.png) no-repeat center / contain;
+}
+#img-7 {
+    background: url(./assets/img/7_submit.png) no-repeat center / contain;
+}
+#img-8 {
+    background: url(./assets/img/8_finished.png) no-repeat center / contain;
+}
+#img-9 {
+    background: url(./assets/img/9_rest.png) no-repeat center / contain;
+}
+#img-10 {
+    background: url(./assets/img/10_crossCheck.png) no-repeat center / contain;
+}
+
+
+
+/*media for tablets*/
+@media screen and (min-width: 820px) {
+
+}
+
+/*media for desktop*/
+@media screen and (min-width: 1920px) {
+
+}
