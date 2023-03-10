@@ -43,23 +43,23 @@ input:checked~label >.meme-img {
   }
 .meme-name {
     display: flex;
+    justify-content: space-between;
     font-size: 1em;
     text-align: left;
     cursor: pointer;
 }
-.meme-name::after {
-    width: .8em;
-    height: .8em;
-    margin-left: auto;
-    background-size: .8em;
-    content: '';
-    background-image: url(../assets/icons/angle-down-solid.svg);
-    transition: all 0.35s;
+span {
+    height: 1em;
+    width: 1em;
+}
+input:checked~label>span {
+    transform: rotate(45deg);
 }
 .meme-img {
     width: 100%;
     height: 0;
     transition: .5s;
+    cursor: pointer;
 }
 #img-1 {
     background: url(../assets/img/1_waiting.png) no-repeat center / contain;
@@ -96,10 +96,42 @@ input:checked~label >.meme-img {
 
 /*media for tablets*/
 @media screen and (min-width: 820px) {
-
+    .wrapper {
+        width: 80%;
+    }
+        .title {
+        font-size: 2.5em;
+    }
+    .meme-name {
+        font-size: 1.5em;
+    }
 }
 
-/*media for desktop*/
-@media screen and (min-width: 1920px) {
+/*media for desktop CHANGE 1000 TO 1920!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media screen and (min-width: 1000px) {
+    .wrapper {
+        width: 60%;
+    }
+        .title {
+        font-size: 4em;
+    }
+    .meme-name {
+        font-size: 2em;
+        color: blue;
+    }
+    input:checked~.meme-name {
+        color: black;
+    }
+
+
+    main:hover>.meme-container>label>span {
+        transform: rotate(45deg);
+    }
+    main:hover>.meme-container>.meme-name {
+        color: black;
+    }
+    .meme-container:hover>.meme-label>.meme-img {
+        height: 40vh;
+    }
 
 }
