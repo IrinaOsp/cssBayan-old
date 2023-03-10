@@ -51,6 +51,7 @@ input:checked~label >.meme-img {
 span {
     height: 1em;
     width: 1em;
+    background: url(../assets/icons/plus-solid.svg) no-repeat;
 }
 input:checked~label>span {
     transform: rotate(45deg);
@@ -60,6 +61,13 @@ input:checked~label>span {
     height: 0;
     transition: .5s;
     cursor: pointer;
+}
+.meme-container:active>.meme-name {
+    filter: drop-shadow(.1em .1em 0 red)
+}
+.meme-container:active .meme-label>.meme-img {
+    filter: drop-shadow(16px 16px 20px blue) invert(75%);
+    transition: .1s;
 }
 #img-1 {
     background: url(../assets/img/1_waiting.png) no-repeat center / contain;
@@ -122,9 +130,7 @@ input:checked~label>span {
     input:checked~.meme-name {
         color: black;
     }
-
-
-    main:hover>.meme-container>label>span {
+    .meme-container:hover>label>span {
         transform: rotate(45deg);
     }
     main:hover>.meme-container>.meme-name {
@@ -133,5 +139,4 @@ input:checked~label>span {
     .meme-container:hover>.meme-label>.meme-img {
         height: 40vh;
     }
-
 }
