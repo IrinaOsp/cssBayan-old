@@ -1,17 +1,8 @@
-/* @font-face {
-    font-family: 'Oxygen', sans-serif;
-    src: url(../assets/fonts/Oxygen-Light.ttf);
-    font-weight: 300;
-} */
 @font-face {
     font-family: 'Rowdies';
     src: url(../assets/fonts/Rowdies-Bold.ttf);
 }
-/* @font-face {
-    font-family: 'Oxygen', sans-serif;;
-    src: url(../assets/fonts/Oxygen-Bold.ttf);
-    font-weight: 700;
-} */
+
 * {
     box-sizing: border-box;
     font-family: 'Rowdies';
@@ -71,7 +62,7 @@ input:checked~label>span {
 }
 .meme-container:active .meme-label>.meme-img {
     filter: drop-shadow(16px 16px 20px orange);
-    transition: .1s;
+    transition: .4s;
 }
 #img-1 {
     background: url(../assets/img/1_waiting.png) no-repeat center / contain;
@@ -119,8 +110,8 @@ input:checked~label>span {
     }
 }
 
-/*media for desktop CHANGE 1000 TO 1920!!!!!!!!!!!!!!!!!!!!!!!!!*/
-@media screen and (min-width: 1000px) {
+/*media for desktop*/
+@media screen and (min-width: 1920px) {
     .wrapper {
         width: 60%;
     }
@@ -138,9 +129,11 @@ input:checked~label>span {
     }
     .meme-container:hover>label>span {
         transform: rotate(45deg);
+        transition: .4s;
     }
     main:hover>.meme-container>.meme-name {
         color: black;
+        transition: .4s;
     }
     .meme-container:hover>.meme-label>.meme-img {
         height: 40vh;
