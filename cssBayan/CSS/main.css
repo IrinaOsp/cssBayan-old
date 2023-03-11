@@ -1,21 +1,20 @@
-@font-face {
+/* @font-face {
     font-family: 'Oxygen', sans-serif;
     src: url(../assets/fonts/Oxygen-Light.ttf);
     font-weight: 300;
-}
+} */
 @font-face {
-    font-family: 'Oxygen', sans-serif;;
-    src: url(../assets/fonts/Oxygen-Regular.ttf);
-    font-weight: 500;
+    font-family: 'Rowdies';
+    src: url(../assets/fonts/Rowdies-Bold.ttf);
 }
-@font-face {
+/* @font-face {
     font-family: 'Oxygen', sans-serif;;
     src: url(../assets/fonts/Oxygen-Bold.ttf);
     font-weight: 700;
-}
+} */
 * {
     box-sizing: border-box;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Rowdies';
     font-weight: 700;
     scroll-behavior: smooth;
 }
@@ -33,6 +32,9 @@ body {
 .meme-container {
     text-align: center;
 }
+.meme-line {
+    border-top: .05em solid rgb(213, 213, 213);
+}
 .meme-container input {
     display: none;
     height: 100%;
@@ -42,6 +44,8 @@ input:checked~label >.meme-img {
     transition: .5s;
   }
 .meme-name {
+    padding-top: .5em;
+    padding-bottom: .5em;
     display: flex;
     justify-content: space-between;
     font-size: 1em;
@@ -63,10 +67,10 @@ input:checked~label>span {
     cursor: pointer;
 }
 .meme-container:active>.meme-name {
-    filter: drop-shadow(.1em .1em 0 red)
+    filter: drop-shadow(.2em .2em 0 orange)
 }
 .meme-container:active .meme-label>.meme-img {
-    filter: drop-shadow(16px 16px 20px blue) invert(75%);
+    filter: drop-shadow(16px 16px 20px orange);
     transition: .1s;
 }
 #img-1 {
@@ -120,11 +124,13 @@ input:checked~label>span {
     .wrapper {
         width: 60%;
     }
-        .title {
-        font-size: 4em;
+    .title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 3em;
     }
     .meme-name {
-        font-size: 2em;
+        font-size: 1.5em;
         color: blue;
     }
     input:checked~.meme-name {
